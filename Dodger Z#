@@ -1,0 +1,91 @@
+// Required graphics initialization
+func Start()
+{
+    ZS.Graphics.Init("Dodger", 400, 500)
+}
+
+// Main function that runs every frame
+func Update(deltaTime)
+{
+    // Set up game objects
+    Vec2 playerPosition = NVec2(200, 450)
+    Vec2 playerSize = NVec2(20, 20)
+    float playerSpeed = 400
+    
+    Vec2 enemyPosition = NVec2(0, 0)
+    Vec2 enemySize = NVec2(20, 20)
+    float enemySpeed = 200
+    
+    // Move player
+    if ZS.Input.KeyDown(KeyCode.Left)
+    {
+        playerPosition.x -= playerSpeed * deltaTime
+    }
+    if ZS.Input.KeyDown(KeyCode.Right)
+    {
+        playerPosition.x += playerSpeed * deltaTime
+    }
+    
+    // Keep player in bounds
+    if playerPosition.x < playerSize.x / 2
+    {
+        playerPosition.x = playerSize.x / 2
+    }
+    if playerPosition.x > ZS.Graphics.ScreenWidth() - playerSize.x / 2
+    {
+        playerPosition.x = ZS.Graphics.ScreenWidth() - playerSize.x / 2
+    }
+    
+    // Move enemy
+    enemyPosition.y += enemySpeed * deltaTime
+    
+    // Respawn enemy when offscreen
+    if enemyPosition.y > ZS.Graphics.ScreenHeight() + enemySize.y / 2
+    {
+        enemyPosition.x = Random.Range(enemySize.x / 2, ZS.Graphics.ScreenWidth() - enemySize.x / 2)
+        enemyPosition.y = -enemySize.y / 2
+    }
+    
+    // Check for collision
+    Vec2 playerMin = playerPosition - playerSize / 2
+    Vec2 playerMax = playerPosition + playerSize / 2
+    Vec2 enemyMin = enemyPosition - enemySize / 2
+    Vec2 enemyMax = enemyPosition + enemySize / 2
+    
+    if playerMax.x > enemyMin.x && playerMin.x < enemyMax.x && playerMax.y > enemyMin.y && playerMin.y < enemyMax.y)
+    {
+        ZS.Graphics.Quit()
+    }
+    
+    // Draw objects
+    ZS.Graphics.Clear()
+    ZS.Graphics.DrawRect(playerPosition, playerSize, "white")
+    ZS.Graphics.DrawRect(enemyPosition, enemySize, "red")
+}
+
+// Entry point
+func Main()
+{
+    Start()
+    ZS.Graphics.Run(Update)
+}
+
+func Main()
+{
+    int screenWidth = 500
+    int screenHeight = 500
+    ZS.Graphics.Init("Title of window", screenWidth, screenHeight)
+    
+    Vec2 position = NVec2(250, 250)
+    Vec2 scale = NVec2(20, 20)
+    float rotation = 0
+    
+    global Sprite exampleSprite = ZS.Graphics.Sprite(position, scale, rotation)
+    exampleSprite.FillRectangle(ZS.Colors.Red, NVec2(0, 0), NVec2(20, 20))
+    
+    while true
+    {
+        ZS.Graphics.Draw(exampleSprite)
+        ZS.Graphics.Present()
+    }
+}
