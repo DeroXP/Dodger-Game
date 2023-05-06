@@ -14,23 +14,23 @@ In terms of starter code for games like Undertale and Osu!, it really depends on
 
 Kotlin:
 
-Install the Kotlin compiler: You can download the Kotlin compiler from the official Kotlin website. The compiler is available for Windows, macOS, and Linux.
+1. Install the Kotlin compiler: You can download the Kotlin compiler from the official Kotlin website. The compiler is available for Windows, macOS, and Linux.
 
-Write your Kotlin code: You can use any text editor to write your Kotlin code. Save your code with the ".kt" file extension.
+2. Write your Kotlin code: You can use any text editor to write your Kotlin code. Save your code with the ".kt" file extension.
 
-Here is an example Kotlin program that prints "Hello, world!" to the console:
+  Here is an example Kotlin program that prints "Hello, world!" to the console:
 
-  fun main(args: Array<String>) {
-      println("Hello, world!")
-  }
+    fun main(args: Array<String>) {
+        println("Hello, world!")
+    }
 
-Compile and run your Kotlin code: Open a terminal or command prompt, navigate to the directory where you saved your Kotlin code, and run the following command:
+3. Compile and run your Kotlin code: Open a terminal or command prompt, navigate to the directory where you saved your Kotlin code, and run the following command:
   
-  kotlinc <filename>.kt -include-runtime -d <executable_name>.jar
+    kotlinc <filename>.kt -include-runtime -d <executable_name>.jar
   
-This will compile your Kotlin code into a Java archive file (.jar). To run the program, use the following command:
+  This will compile your Kotlin code into a Java archive file (.jar). To run the program, use the following command:
   
-  java -jar <executable_name>.jar
+    java -jar <executable_name>.jar
 
 Swift:
 
@@ -38,14 +38,14 @@ Swift:
 
 2. Write your Swift code: Open Xcode, create a new project, and choose the "Command Line Tool" template. Enter a name for your project and select "Swift" as the language. Xcode will create a default Swift file for you.
 
-Here is an example Swift program that prints "Hello, world!" to the console:
+  Here is an example Swift program that prints "Hello, world!" to the console:
   
-  print("Hello, world!")
+    print("Hello, world!")
 
-Build and run your Swift code: Press the "Play" button in Xcode to build and run your code. The output will be displayed in the Xcode console.
-Alternatively, you can use the Swift command-line tools to compile and run your Swift code outside of Xcode. To do this, save your Swift code to a file with the ".swift" extension, and use the following commands to compile and run your code:
+3. Build and run your Swift code: Press the "Play" button in Xcode to build and run your code. The output will be displayed in the Xcode console.
+  Alternatively, you can use the Swift command-line tools to compile and run your Swift code outside of Xcode. To do this, save your Swift code to a file with the ".swift" extension, and use the following commands to compile and run your code:
   
-  swiftc <filename>.swift -o <executable_name>
-./<executable_name>
+    swiftc <filename>.swift -o <executable_name>
+  ./<executable_name>
 
 These commands will compile your Swift code into an executable file and run it from the terminal.
