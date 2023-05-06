@@ -49,3 +49,27 @@ Swift:
   ./<executable_name>
 
 These commands will compile your Swift code into an executable file and run it from the terminal.
+
+  //# hello.rb
+
+puts "Hello, world!"
+
+  To run this program, follow these steps:
+
+Install Ruby: You can download Ruby from the official Ruby website. Ruby is available for Windows, macOS, and Linux.
+
+Save the code: Copy the code above into a file called "hello.rb" and save it on your computer.
+
+Open a terminal or command prompt: On Windows, press the "Windows key + R" to open the Run dialog box, type "cmd" and press Enter. On macOS, open the Terminal app.
+
+Navigate to the directory where the code is saved: Use the "cd" command to navigate to the directory where you saved the "hello.rb" file.
+
+For example, if the file is saved on your desktop, you can navigate to the desktop directory by running:
+  cd ~/Desktop
+
+Run the program: Type the following command and press Enter:
+  ruby hello.rb
+
+ This will run the "hello.rb" program and output "Hello, world!" to the console.
+
+That's it! You've successfully run a Ruby program.
