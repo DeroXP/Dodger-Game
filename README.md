@@ -51,7 +51,7 @@ Swift:
 
 These commands will compile your Swift code into an executable file and run it from the terminal.
 
-  //# hello.rb
+  #hello.rb
 
 puts "Hello, world!"
 
